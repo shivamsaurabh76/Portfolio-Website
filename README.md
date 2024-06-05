@@ -8,9 +8,6 @@ This is a portfolio website project created by [Shivam Saurabh](https://github.c
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 

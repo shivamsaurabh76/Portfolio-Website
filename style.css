@@ -780,3 +780,120 @@ section{
         animation: none;
     }
 }
+
+
+
+/* Updated styles for Professional Skills section */
+
+/* Existing styles remain unchanged */
+
+/* ... (keep all existing styles) ... */
+
+/* Updated styles for Professional Skills section */
+.container1 {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 75px 20px;
+    margin: 0 auto;
+}
+
+.radial-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.radial-bar {
+    width: 50%;
+    max-width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Updated styles for side drawer */
+@media screen and (max-width: 768px) {
+
+    .header .bx-menu,
+    .navbar .bx-x {
+        display: block;
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 102;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background: #051129;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        z-index: 101;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 20px 0;
+        font-size: 20px;
+    }
+
+    .navbar .bx-x {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Adjust other sections for small screens */
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 36px;
+    }
+
+    .about-text h4 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .sub-title {
+        font-size: 36px;
+    }
+
+    .main-text h2 {
+        font-size: 36px;
+    }
+
+    .contact-text h2 {
+        font-size: 36px;
+    }
+}

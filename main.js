@@ -9,18 +9,47 @@ var typed = new Typed('.text', {
 
 // JavaScript for opening and closing the menu
 function openmenu() {
-    document.getElementById("sidemenu").style.right = "0";
+    document.getElementById("sidemenu").classList.add("active");
     document.getElementById("menuToggle").style.display = "none";
-    document.querySelector(".navbar .bx-x").style.display = "block";
     event.preventDefault();
 }
 
 function closemenu() {
-    document.getElementById("sidemenu").style.right = "-200px";
+    document.getElementById("sidemenu").classList.remove("active");
     document.getElementById("menuToggle").style.display = "block";
-    document.querySelector(".navbar .bx-x").style.display = "none";
-    event.preventDefault(); // Prevent default behavior (scrolling to top)
+    event.preventDefault();
 }
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const sidemenu = document.getElementById("sidemenu");
+    const menuToggle = document.getElementById("menuToggle");
+    
+    if (!sidemenu.contains(event.target) && event.target !== menuToggle) {
+        sidemenu.classList.remove("active");
+        menuToggle.style.display = "block";
+    }
+});
+
+// New function to close menu when a section is clicked
+function closeMenuOnSectionClick() {
+    const menuLinks = document.querySelectorAll('.navbar a');
+    const sidemenu = document.getElementById("sidemenu");
+    const menuToggle = document.getElementById("menuToggle");
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768) {  // Check if it's a small screen
+                sidemenu.classList.remove("active");
+                menuToggle.style.display = "block";
+            }
+        });
+    });
+}
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', closeMenuOnSectionClick);
+
 
 
 // JavaScript for sending email using SMTP.js
